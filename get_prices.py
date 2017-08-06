@@ -10,7 +10,7 @@ def get_prices(code, start, end=None, interval='d', kind="Open", verbose=True):
     # kind,,,kind of stock data
 
     # output;
-    # stock data
+    # stock data; list
 
     base = 'http://info.finance.yahoo.co.jp/history/?code={0}.T&{1}&{2}&tm={3}&p={4}'
 
