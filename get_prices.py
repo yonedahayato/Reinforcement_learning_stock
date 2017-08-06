@@ -1,6 +1,6 @@
 import pandas as pd
 
-def get_prices(code, start, end=None, interval='d', kind="Open", verbose=True):
+def get_prices(code, start, end=None, interval='d', kind="Open", verbose=True, output_dataframe=False):
     # get stock price
     # input:
     # code,,, stock code
@@ -63,7 +63,10 @@ def get_prices(code, start, end=None, interval='d', kind="Open", verbose=True):
     if verbose:
         print(result)
 
-    result = list(result.ix[0:, kind])
+    if output_dataframe:
+        result = result.ix[0:, kind]
+    else:
+        result = list(result.ix[0:, kind])
 
     return result
 
