@@ -69,7 +69,6 @@ def get_prices(code, start, end=None, interval='d', kind="Open", verbose=True):
 
 if __name__ == "__main__":
     try:
-        #price = get_prices(9104, start="1900/05/01", end="1900/07/01", interval="m", kind="Open", verbose=True)
         price = get_prices(9104, start="2016/05/01", end="2016/07/01", interval="m", kind="Open", verbose=True)
     except:
         print("get price error")
