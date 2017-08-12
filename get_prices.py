@@ -1,6 +1,6 @@
 import pandas as pd
 
-def get_prices(code, start, end=None, interval='d', kind="Open", verbose=True, output_dataframe=False):
+def get_prices(code, start, end=None, interval='d', kind="Open", verbose=False, output_dataframe=False, length_info=False):
     # get stock price
     # input:
     # code,,, stock code
@@ -67,6 +67,9 @@ def get_prices(code, start, end=None, interval='d', kind="Open", verbose=True, o
         result = result.ix[0:, kind]
     else:
         result = list(result.ix[0:, kind])
+
+    if length_info:
+        print("length: {}".format(len(length_info)))
 
     return result
 
