@@ -69,7 +69,7 @@ def get_prices(code, start, end=None, interval='d', kind="Open", verbose=False, 
         result = list(result.ix[0:, kind])
 
     if length_info:
-        print("length: {}".format(len(length_info)))
+        print("length: {}".format(len(result)))
 
     return result
 
